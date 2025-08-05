@@ -4,10 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 export const FooterSection = (): JSX.Element => {
   // Navigation links data
   const navLinks = [
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
-    { label: "Team", href: "#team" },
-    { label: "Contact", href: "#contact" },
+    { label: "Hizmetler", href: "#services" },
+    { label: "Projeler", href: "#projects" },
+    { label: "Ekip", href: "#team" },
+    { label: "İletişim", href: "#contact" },
   ];
 
   return (
@@ -49,11 +49,11 @@ export const FooterSection = (): JSX.Element => {
               {/* Email Section */}
               <div className="w-full lg:w-[359.64px] flex items-center justify-center py-4 lg:py-0 border-t-[1.47px] lg:border-t-0 border-solid border-[#282828]">
                 <a
-                  href="mailto:hello@clonify.io"
+                  href="mailto:info@cmlc.com.tr"
                   className="font-heading-06 text-black-300 text-center text-base lg:text-[length:var(--heading-06-font-size)] hover:text-white transition-colors"
                   data-testid="footer-email"
                 >
-                  hello@clonify.io
+                  info@cmlc.com.tr
                 </a>
               </div>
             </div>
@@ -89,7 +89,7 @@ export const FooterSection = (): JSX.Element => {
               {/* Copyright Section */}
               <div className="flex-1 flex items-center justify-center py-4">
                 <span className="font-text-14px-regular text-black-300 text-center text-sm lg:text-[length:var(--text-14px-regular-font-size)]" data-testid="footer-copyright">
-                  © 2088 Nayzak Design
+                  © 2025 Çamlıca Reklam LTD.
                 </span>
               </div>
             </div>

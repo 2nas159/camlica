@@ -6,32 +6,41 @@ import { HeaderSection } from "./sections/HeaderSection";
 import { TeamSection } from "./sections/TeamSection";
 
 export const Homepage = (): JSX.Element => {
-  // Services data for mapping
+  // Services data from CMLC website
   const services = [
-    { name: "Web & Mobile Design", color: "bg-blue-500" },
-    { name: "Brand Identity", color: "bg-purple-500" },
-    { name: "App Development", color: "bg-pink-500" },
-    { name: "Consultancy", color: "bg-red-500" },
-    { name: "Packaging", color: "bg-green-500" },
+    { name: "Google ADS", color: "bg-blue-500", icon: "🎯" },
+    { name: "Grafik Tasarım", color: "bg-purple-500", icon: "🎨" },
+    { name: "Video ve Animasyon", color: "bg-pink-500", icon: "🎬" },
+    { name: "SEO", color: "bg-green-500", icon: "🔍" },
+    { name: "Web Tasarım", color: "bg-orange-500", icon: "💻" },
+    { name: "Sosyal Medya Yönetimi", color: "bg-red-500", icon: "📱" },
   ];
 
-  // Portfolio projects data
+  // Portfolio projects data based on CMLC services
   const portfolioProjects = [
     {
-      title: "Project Harmony",
+      title: "Google Ads Kampanyası",
+      description: "Dijital medyada etkili reklam çözümleri",
       image: "/figmaAssets/portfolio-1.png",
+      category: "Digital Marketing"
     },
     {
-      title: "Green Waves Inc",
+      title: "Kurumsal Web Design",
+      description: "Modern ve kullanıcı dostu web tasarımları",
       image: "/figmaAssets/portfolio-2.png",
+      category: "Web Design"
     },
     {
-      title: "Modern Patterns",
+      title: "Sosyal Medya Kampanyası",
+      description: "Sosyal medyada marka bilinirliği artırma",
       image: "/figmaAssets/portfolio-3.png",
+      category: "Social Media"
     },
     {
-      title: "Cream Check",
+      title: "Video Prodüksiyon",
+      description: "Profesyonel video ve animasyon hizmetleri",
       image: "/figmaAssets/portfolio-4.png",
+      category: "Video Production"
     },
   ];
 
@@ -43,10 +52,8 @@ export const Homepage = (): JSX.Element => {
         <div className="flex flex-col lg:flex-row w-full max-w-[943.32px] items-center justify-center lg:justify-end gap-8 lg:gap-[47.17px] relative">
           <div className="flex flex-col w-full lg:max-w-[577.05px] items-start justify-center gap-6 lg:gap-[23.58px] relative">
             <p className="relative self-stretch mt-[-0.74px] font-heading-05 font-[number:var(--heading-05-font-weight)] text-black-100 text-xl sm:text-2xl lg:text-[length:var(--heading-05-font-size)] tracking-tight lg:tracking-[var(--heading-05-letter-spacing)] leading-relaxed lg:leading-[var(--heading-05-line-height)] [font-style:var(--heading-05-font-style)]">
-              We are passionate about creating visually stunning and functional
-              solutions that communicate effectively. I have a keen eye for
-              detail and a deep understanding of design principles, which I use
-              to deliver projects that exceed my clients' expectations.
+              Çamlıca Reklam Ajansı olarak dijital medyanın sınırlarını sizin için yeniden çiziyoruz! 
+              Dijital dünyada markanızı öne çıkaracak yaratıcı çözümler sunuyoruz.
             </p>
           </div>
 
@@ -61,43 +68,65 @@ export const Homepage = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="w-full max-w-[1061.23px] px-4">
-        <div className="flex flex-wrap justify-center lg:justify-start gap-3 lg:gap-4 mb-8">
+      <section className="w-full max-w-[1061.23px] px-4" id="services">
+        <div className="text-center mb-8">
+          <h2 className="text-white text-2xl lg:text-3xl font-semibold mb-4">Hizmetlerimiz</h2>
+          <p className="text-black-300 text-base lg:text-lg">Dijital dünyada ihtiyacınız olan tüm hizmetler</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-12">
           {services.map((service, index) => (
-            <Card key={index} className="bg-black-900 border-none" data-testid={`service-${index}`}>
-              <CardContent className="flex items-center p-2 lg:p-3">
+            <Card key={index} className="bg-black-900 border border-[#282828] hover:border-white/20 transition-all duration-300 group cursor-pointer" data-testid={`service-${index}`}>
+              <CardContent className="flex flex-col items-center text-center p-6 lg:p-8">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
                 <div
-                  className={`w-3 h-3 rounded-full ${service.color} mr-2 flex-shrink-0`}
+                  className={`w-2 h-2 rounded-full ${service.color} mb-3 flex-shrink-0`}
                 ></div>
-                <span className="text-black-100 font-text-14px-regular text-sm lg:text-[length:var(--text-14px-regular-font-size)] whitespace-nowrap">
+                <h3 className="text-black-100 font-semibold text-base lg:text-lg mb-2">
                   {service.name}
-                </span>
+                </h3>
+                <p className="text-black-400 text-sm lg:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Profesyonel {service.name.toLowerCase()} hizmetleri
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="w-full max-w-[1061.23px] mb-8 px-4" id="projects">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+      <section className="w-full max-w-[1061.23px] mb-12 px-4" id="projects">
+        <div className="text-center mb-8">
+          <h2 className="text-white text-2xl lg:text-3xl font-semibold mb-4">Projelerimiz</h2>
+          <p className="text-black-300 text-base lg:text-lg">Başarılı dijital kampanyalarımızdan örnekler</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           {portfolioProjects.map((project, index) => (
             <Card
               key={index}
-              className="bg-black-900 border-none overflow-hidden hover:border-[#282828] transition-all duration-300 group"
+              className="bg-black-900 border border-[#282828] overflow-hidden hover:border-white/20 transition-all duration-300 group cursor-pointer"
               data-testid={`portfolio-project-${index}`}
             >
               <CardContent className="p-0">
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-video overflow-hidden relative">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white text-sm font-medium px-3 py-1 bg-white/20 rounded-full backdrop-blur-sm">
+                      {project.category}
+                    </span>
+                  </div>
                 </div>
                 <div className="p-4 lg:p-6">
-                  <h3 className="text-black-100 font-text-14px-regular text-base lg:text-lg">
+                  <h3 className="text-black-100 font-semibold text-base lg:text-lg mb-2">
                     {project.title}
                   </h3>
+                  <p className="text-black-400 text-sm lg:text-base">
+                    {project.description}
+                  </p>
                 </div>
               </CardContent>
             </Card>

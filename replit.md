@@ -85,8 +85,16 @@ The project uses a comprehensive design system with custom CSS variables:
 - Implemented responsive grid layouts for portfolio and team sections
 - Added smooth scroll navigation with proper anchor links
 - Enhanced mobile experience with collapsible navigation
+- **2025-08-05**: Redesigned for CMLC.com.tr job application demo
+- Updated content with CMLC services (Google Ads, Grafik Tasarım, Video, SEO, Web Design, Social Media)
+- Added Turkish language content throughout the site
+- Enhanced services section with icons and hover effects
+- Added statistics section showing company achievements
+- Updated team profiles with Turkish names and relevant specialties
 
 ## User Preferences
 - Clean, modern design following Figma specifications
 - Responsive layout for all screen sizes
 - Dark theme with professional appearance
+- Turkish language content for CMLC agency demo
+- Focus on digital marketing and advertising services

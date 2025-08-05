@@ -14,10 +14,10 @@ export const HeaderSection = (): JSX.Element => {
 
   // Navigation menu items data
   const mainNavItems = [
-    { label: "Projects", href: "#projects", testId: "nav-projects" },
-    { label: "About", href: "#about", testId: "nav-about" },
-    { label: "Team", href: "#team", testId: "nav-team" },
-    { label: "Contact", href: "#contact", testId: "nav-contact" },
+    { label: "Hizmetler", href: "#services", testId: "nav-services" },
+    { label: "Projeler", href: "#projects", testId: "nav-projects" },
+    { label: "Ekip", href: "#team", testId: "nav-team" },
+    { label: "İletişim", href: "#contact", testId: "nav-contact" },
   ];
 
   const secondaryNavItems = [
@@ -181,7 +181,7 @@ export const HeaderSection = (): JSX.Element => {
       {/* Hero Section */}
       <div className="flex flex-col w-full items-center justify-center gap-8 lg:gap-[53px] pb-8 lg:pb-[29.5px] px-4">
         <h1 className="w-full max-w-[830px] mt-[-0.74px] font-display-01 text-white text-center text-4xl sm:text-6xl md:text-7xl lg:text-[length:var(--display-01-font-size)] tracking-tight lg:tracking-[var(--display-01-letter-spacing)] leading-tight lg:leading-[var(--display-01-line-height)]">
-          Krate design and motion studio
+          ÇAMLICA Digital Agency
         </h1>
 
         <div className="w-full max-w-[943px] aspect-video lg:h-[450px]">

@@ -17,12 +17,12 @@ export const ContactSection = (): JSX.Element => {
           >
             <div className="flex flex-col items-center gap-4 lg:gap-6 max-w-full lg:max-w-[507px] z-10">
               <h2 className="font-display-03 text-white text-3xl sm:text-4xl md:text-5xl lg:text-[length:var(--display-03-font-size)] tracking-tight lg:tracking-[var(--display-03-letter-spacing)] leading-tight lg:leading-[var(--display-03-line-height)] font-[number:var(--display-03-font-weight)] [font-style:var(--display-03-font-style)]" data-testid="contact-heading">
-                Have an idea? Let's talk.
+                Bizimle İletişime Geçin!
               </h2>
 
               <p className="font-text-22px-regular text-white text-base sm:text-lg lg:text-[length:var(--text-22px-regular-font-size)] tracking-normal lg:tracking-[var(--text-22px-regular-letter-spacing)] leading-relaxed lg:leading-[var(--text-22px-regular-line-height)] font-[number:var(--text-22px-regular-font-weight)] [font-style:var(--text-22px-regular-font-style)] max-w-lg" data-testid="contact-description">
-                Visually attractive design from concept to final result. We
-                create solutions that are bold and forward-looking.
+                Dijital dünyada markanızı öne çıkaracak yaratıcı projeler için 
+                bizimle iletişime geçin. Ücretsiz danışmanlık hizmeti sunuyoruz.
               </p>
             </div>
 
@@ -32,7 +32,7 @@ export const ContactSection = (): JSX.Element => {
               data-testid="contact-consultation-button"
             >
               <CalendarIcon className="w-4 h-4 lg:w-[14.74px] lg:h-[14.74px]" />
-              <span>Free Consultation</span>
+              <span>Ücretsiz Danışmanlık</span>
             </Button>
           </div>
         </CardContent>
