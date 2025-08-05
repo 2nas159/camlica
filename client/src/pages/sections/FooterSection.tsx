@@ -11,16 +11,17 @@ export const FooterSection = (): JSX.Element => {
   ];
 
   return (
-    <footer className="flex flex-col items-center py-8 lg:py-14 bg-black-900 w-full px-4">
-      <Card className="w-full max-w-[943px] rounded-[23.58px] border-[1.47px] border-solid border-[#282828] overflow-hidden">
+    <footer className="flex flex-col items-center py-8 lg:py-14 bg-black-900 w-full min-w-[680px]">
+      <div className="w-full max-w-[1400px] min-w-[680px] px-4">
+        <Card className="w-full rounded-[23.58px] border-[1.47px] border-solid border-[#282828] overflow-hidden">
         <CardContent className="p-0 flex flex-col lg:flex-row">
           {/* Logo Section */}
           <div className="w-full lg:w-[219.62px] lg:border-r-[1.47px] border-b-[1.47px] lg:border-b-0 border-solid border-[#282828] flex items-center justify-center py-6 lg:py-0">
-            <div className="relative w-[102px] h-[31px]">
+            <div className="relative w-[150px] h-[46px]">
               <img
-                className="w-[95px] h-[22px]"
+                className="h-full w-full object-contain"
                 alt="Clonify Logo"
-                src="/figmaAssets/union.svg"
+                src="/figmaAssets/logo.svg"
                 data-testid="footer-logo"
               />
             </div>
@@ -32,7 +33,7 @@ export const FooterSection = (): JSX.Element => {
             <div className="flex flex-col lg:flex-row border-b-[1.47px] border-solid border-[#282828]">
               {/* Navigation Links */}
               <div className="flex-1 lg:border-r-[1.47px] border-solid border-[#282828] py-4 lg:py-7">
-                <nav className="flex flex-wrap items-center justify-center lg:justify-start gap-4 lg:gap-[29.48px] lg:ml-[67px]">
+                <nav className="flex flex-wrap items-center justify-center lg:justify-start gap-4 lg:gap-[29.48px] px-4 lg:px-[67px]">
                   {navLinks.map((link, index) => (
                     <a
                       key={index}
@@ -78,12 +79,45 @@ export const FooterSection = (): JSX.Element => {
 
               {/* Social Media Section */}
               <div className="flex-1 sm:border-r-[1.47px] border-b-[1.47px] sm:border-b-0 border-solid border-[#282828] flex items-center justify-center py-4">
-                <img
-                  className="h-6 lg:h-auto max-h-8 w-auto"
-                  alt="Social Media Icons"
-                  src="/figmaAssets/col-02.svg"
-                  data-testid="footer-social-icons"
-                />
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.instagram.com/cmlc.com.tr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                    data-testid="footer-social-instagram"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-black-300 hover:text-white transition-colors">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/90979263"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                    data-testid="footer-social-linkedin"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-black-300 hover:text-white transition-colors">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/camlicaadvertising"
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="hover:opacity-80 transition-opacity"
+                    data-testid="footer-social-facebook"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-black-300 hover:text-white transition-colors">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                  </a>
+                </div>
               </div>
 
               {/* Copyright Section */}
@@ -96,6 +130,7 @@ export const FooterSection = (): JSX.Element => {
           </div>
         </CardContent>
       </Card>
+      </div>
     </footer>
   );
 };

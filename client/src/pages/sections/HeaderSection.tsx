@@ -54,7 +54,7 @@ export const HeaderSection = (): JSX.Element => {
               {/* Top navigation row */}
               <div className="flex items-center w-full flex-1 border-b-[1.47px] border-[#282828] px-4 lg:px-0">
                 <div className="flex-1 h-full lg:border-r-[1.47px] border-[#282828] flex items-center justify-center lg:justify-start">
-                  <NavigationMenu className="relative lg:top-3 lg:left-[200px]">
+                  <NavigationMenu className="relative lg:left-[200px]">
                     <NavigationMenuList className="flex flex-wrap gap-4 lg:gap-[29.5px] py-4 lg:py-0">
                       {mainNavItems.map((item, index) => (
                         <NavigationMenuItem key={index}>
@@ -141,7 +141,9 @@ export const HeaderSection = (): JSX.Element => {
         </div>
 
         {/* Mobile Menu Dropdown */}
-        {isMobileMenuOpen && (
+        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}>
           <div className="border-t border-[#282828] bg-black-900" data-testid="mobile-menu">
             <nav className="flex flex-col p-4 space-y-4">
               {mainNavItems.map((item, index) => (
@@ -175,13 +177,13 @@ export const HeaderSection = (): JSX.Element => {
               </div>
             </nav>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Hero Section */}
       <div className="flex flex-col w-full items-center justify-center gap-8 lg:gap-[53px] pb-8 lg:pb-[29.5px] px-4">
-        <h1 className="w-full max-w-[830px] mt-[-0.74px] font-display-01 text-white text-center text-4xl sm:text-6xl md:text-7xl lg:text-[length:var(--display-01-font-size)] tracking-tight lg:tracking-[var(--display-01-letter-spacing)] leading-tight lg:leading-[var(--display-01-line-height)]">
-          ÇAMLICA Digital Agency
+        <h1 className="w-full max-w-[830px] mt-10 font-display-01 text-white text-center text-4xl sm:text-6xl md:text-7xl lg:text-9xl tracking-tight lg:tracking-[var(--display-01-letter-spacing)] leading-tight lg:leading-[var(--display-01-line-height)]">
+          Çamlıca Reklam Ajansı.
         </h1>
 
         <div className="w-full max-w-[943px] aspect-video lg:h-[450px]">
