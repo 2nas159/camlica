@@ -8,7 +8,7 @@ export const TeamSection = (): JSX.Element => {
   // Team member data for CMLC agency
   const teamMembers = [
     {
-      name: "Ahmet Yılmaz",
+      name: "Merve Aksoy",
       position: "Creative Director",
       image: "/figmaAssets/paste-image.png",
       specialty: "Brand Strategy"
@@ -20,19 +20,19 @@ export const TeamSection = (): JSX.Element => {
       specialty: "Google Ads & SEO"
     },
     {
-      name: "Mehmet Can",
+      name: "Zehra Kaya",
       position: "Graphic Designer",
       image: "/figmaAssets/paste-image-2.png",
       specialty: "Visual Design"
     },
     {
-      name: "Zehra Kaya",
+      name: "Mehmet Can",
       position: "Social Media Specialist",
       image: "/figmaAssets/paste-image-3.png",
       specialty: "Content Creation"
     },
     {
-      name: "Burak Öz",
+      name: "Sude Demir",
       position: "Web Developer",
       image: "/figmaAssets/paste-image-4.png",
       specialty: "Frontend Development"
