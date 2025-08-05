@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: camlica-app
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    # Add your DATABASE_URL in Render dashboard environment variables

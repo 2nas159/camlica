@@ -56,9 +56,9 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Use Vercel's port or default to 5000 for local development
+  // Use Render's PORT environment variable or default to 5000 for local development
   const port = process.env.PORT || 5000;
-  const host = process.env.VERCEL ? '0.0.0.0' : 'localhost';
+  const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost';
   
   server.listen(port, host, () => {
     log(`serving on port ${port}`);
